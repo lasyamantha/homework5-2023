@@ -1,0 +1,162 @@
+/* Step 1 */
+@keyframes mymove {
+    0%   {
+        width: 25px;
+        opacity: 0;
+    }
+    100% {
+        width: 475px;
+        opacity: 1;
+    }
+}
+
+#logo{
+    animation-duration: 5s;
+    animation-name: mymove;
+}
+
+/* Step 2 - Default mode */ 
+body{
+    font-family: 'Poppins', serif;
+    background: url('../images/concrete_seamless.png'), #f1f1f1;
+}
+
+/* Step 3 */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Step 4 */
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    color: blue;
+}
+
+/* Step 5 */
+a:visited{
+    color:inherit; 
+}
+
+/* Step 6 */
+.card {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    }
+    .card > header {
+    background-color: #288088;
+    border: 2px solid #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    }
+
+    /* Step 7 */
+    .card{
+        flex-basis: 450px;
+    }
+
+    /* Step 8 */
+    .pricing {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    /* Step 9 */
+    .gallery img{
+        border: solid 10px #50C7C7;
+        margin: 10px;
+        width: 300px;
+    }
+
+    /* Step 10 */
+    .gallery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @media screen and (min-width: 900px) {
+     /* Step 11 */
+        header{
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        /* Step 12 */
+        .card{
+            flex-basis: 275px;
+            }
+        
+        .nav_links{
+            display: flex;
+            flex-direction: row;
+            }
+
+        /* Step 13 */
+        a + header{
+        position: sticky;
+        top: 0;
+        }
+    }
+   /* Step 14 */
+   @media (prefers-reduced-motion) {
+    #logo {
+      animation-name: none;
+    }
+  }
+
+  @media print {
+    /* Step 15 */
+    body {
+      font-family: 'Arial', 'Helvetica';
+      /* Step 16 */
+      background-image: none;
+    }
+  
+    /* Step 17 */
+    nav {
+      width: 100%;
+    }
+  
+    .nav_links {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  
+    /* Step 18 */
+    .pricing {
+      /* align-items: flex-end; */
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  
+    /* Step 19 */
+    .card {
+      border: solid 2px #45ADDD;
+      flex-basis: 325px;
+    }
+  
+    /* Step 20 */
+    .gallery {
+      display: none;
+    }
+
+    .gallery h2 {
+        display: none;
+      }
+  
+    /* Step 21 */
+    .pricing li:nth-child(2)::after {
+      content: "\1F44D";
+    }
+  }  
